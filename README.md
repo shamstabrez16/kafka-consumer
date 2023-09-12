@@ -1,0 +1,50 @@
+# kafka-consumer
+
+
+what is kafka?
+what is messaging system?
+
+
+Architechture of kafka?
+
+Consumer API's
+Producer API's
+Stream API's
+Connection API's
+
+what are advantages of kafka?
+
+what is zookeeper?
+
+
+spring boot 
+- auto configurations
+- maven - build tool - automatical download all the dependencies 
+- embeded server - apache tomcat
+
+steps for kafka installation and running
+
+1. download kafka
+2. unzip kafka zip file and name it with smaller name
+3. create a folder  "kafka-logs"
+4. make changes in server.properties
+5. create a folder "zookeeper-data"
+6. make changes in zookeeper.properties
+
+
+commands to start kafka for both producer and consumer:
+
+- this should be changed according to your own url : 
+"E:\kafka\kafka\kafka\config"
+
+To start zookeeper:
+zookeeper-server-start E:\kafka\kafka\kafka\config\zookeeper.properties
+
+To start kafka:
+kafka-server-start E:\kafka\kafka\kafka\config\server.properties
+
+Kafka producing data: 
+kafka-console-producer.bat --broker-list localhost:9092 --topic mytopic
+
+kafka consuming data :
+E:\kafka\kafka\kafka\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic java_in_use_topic --from-beginning
