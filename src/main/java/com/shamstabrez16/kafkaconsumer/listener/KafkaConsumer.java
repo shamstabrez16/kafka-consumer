@@ -1,6 +1,7 @@
 package com.shamstabrez16.kafkaconsumer.listener;
 
-import com.shamstabrez16.kafkaconsumer.model.User;
+
+import com.shamstabrez16.studentmanagementsystem.model.TestUser;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +13,9 @@ public class KafkaConsumer {
         System.out.println("Consumed message: " + message);
     }
 
-
-    @KafkaListener(topics = "Kafka_Example_json", groupId = "group_json",
+    @KafkaListener(topics = "json_in_use_topic", groupId = "group_json",
             containerFactory = "userKafkaListenerFactory")
-    public void consumeJson(User user) {
-        System.out.println("Consumed JSON Message: " + user);
+    public void consumeJson(TestUser testUser) {
+        System.out.println("Consumed JSON Message: " + testUser.toString());
     }
 }
